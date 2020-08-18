@@ -9,14 +9,14 @@
     <Teleport to="#teleport-modal">
       <div
         v-if="state.modal"
-        class="modal absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center"
+        class="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-full modal"
       >
         <div
-          class="overlay absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75"
+          class="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 overlay"
           @click="toggleModal(false)"
         ></div>
         <div
-          class="content bg-gray-400 p-4 w-1/3 h-64 flex flex-col items-center justify-center z-10"
+          class="z-10 flex flex-col items-center justify-center w-1/3 h-64 p-4 bg-gray-400 content"
         >
           <button
             class="px-4 py-2 mx-2 font-bold text-white bg-red-500 rounded hover:bg-red-700 focus:outline-none"
