@@ -1,11 +1,10 @@
 <template>
   <div class="modal-component">
-    <button
-      class="px-4 py-2 mx-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none"
-      @click="toggleModal(true)"
-    >
-      Modal Open
-    </button>
+    <button-element
+      class="bg-green-500 hover:bg-green-700"
+      :buttonText="'Modal Open'"
+      @action="toggleModal(true)"
+    ></button-element>
     <Teleport to="#teleport-modal">
       <div
         v-if="state.modal"
@@ -16,14 +15,13 @@
           @click="toggleModal(false)"
         ></div>
         <div
-          class="content bg-gray-400 p-4 w-1/3 h-64 flex flex-col items-center justify-center z-10"
+          class="content bg-gray-400 p-4 w-1/3 h-64 flex flex-col items-center justify-center z-10 rounded-md"
         >
-          <button
-            class="px-4 py-2 mx-2 font-bold text-white bg-red-500 rounded hover:bg-red-700 focus:outline-none"
-            @click="toggleModal(false)"
-          >
-            Modal Close
-          </button>
+          <button-element
+            class="bg-red-500 hover:bg-red-700"
+            :buttonText="'Modal Close'"
+            @action="toggleModal(false)"
+          ></button-element>
         </div>
       </div>
     </Teleport>
@@ -32,16 +30,18 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from 'vue'
-
-const state = reactive({
-  modal: false,
-})
-const toggleModal = (value?: boolean) => {
-  state.modal = value ? value : !state.modal
-}
+import ButtonElement from '../elements/button.vue'
 
 export default defineComponent({
+  components: { ButtonElement },
   setup() {
+    const state = reactive({
+      modal: false,
+    })
+    const toggleModal = (value?: boolean) => {
+      state.modal = value ? value : !state.modal
+    }
+
     return {
       state,
       toggleModal,
