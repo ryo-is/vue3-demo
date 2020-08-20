@@ -1,7 +1,7 @@
 <template>
   <div class="todo w-2/3 m-auto grid grid-flow-row grid-cols-3">
     <div
-      class="todo-item flex-1 bg-gray-700 m-4 rounded-md shadow divide-y divide-gray-400"
+      class="todo-item h-56 flex-1 bg-gray-700 m-4 rounded-md shadow divide-y divide-gray-400"
     >
       <div class="task-title py-2 pl-4 pr-2 flex items-center">
         <div class="flex-grow-3 text-left">
@@ -81,8 +81,4 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
-.todo-item {
-  height: 15rem;
-}
-</style>
+<style lang="scss" scoped></style>
