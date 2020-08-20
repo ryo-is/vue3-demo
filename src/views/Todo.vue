@@ -19,7 +19,8 @@
       </div>
       <div class="task-content p-4 text-left">
         <textarea
-          class="w-full focus:outline-none bg-gray-700 border border-gray-400 rounded-md py-1 px-2"
+          style="resize: none;"
+          class="w-full focus:outline-none bg-gray-700 border border-gray-400 rounded-md p-2"
           rows="5"
           placeholder="Content"
         />
