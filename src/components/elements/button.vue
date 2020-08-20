@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
@@ -19,10 +19,10 @@ export default defineComponent({
   },
   setup(_, context) {
     const action = () => {
-      context.emit('action')
-    }
+      context.emit('action');
+    };
 
-    return { action }
+    return { action };
   },
-})
+});
 </script>

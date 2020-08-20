@@ -10,13 +10,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import AppHeader from '@/components/elements/header.vue'
+import { defineComponent } from 'vue';
+import AppHeader from '@/components/elements/header.vue';
 
 export default defineComponent({
   name: 'App',
   components: { AppHeader },
-})
+});
 </script>
 
 <style lang="scss">

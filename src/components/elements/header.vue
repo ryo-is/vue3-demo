@@ -13,16 +13,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue'
+import { defineComponent, reactive } from 'vue';
 
 type Link = {
-  to: string
-  label: string
-}
+  to: string;
+  label: string;
+};
 
 type State = {
-  links: Link[]
-}
+  links: Link[];
+};
 
 export default defineComponent({
   name: 'appHeader',
@@ -32,13 +32,13 @@ export default defineComponent({
         { to: '/', label: 'HOME' },
         { to: '/todo', label: 'TODO' },
       ],
-    })
+    });
 
     return {
       state,
-    }
+    };
   },
-})
+});
 </script>
 
 <style lang="scss" scoped></style>

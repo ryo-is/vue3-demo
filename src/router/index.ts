@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
-import Todo from '../views/Todo.vue'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import Home from '../views/Home.vue';
+import Todo from '../views/Todo.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -13,11 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/todo',
     component: Todo,
   },
-]
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-})
+});
 
-export default router
+export default router;

@@ -13,7 +13,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
   },
-  rules: {},
+  rules: {
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+  },
   overrides: [
     {
       files: [
@@ -25,4 +27,4 @@ module.exports = {
       },
     },
   ],
-}
+};

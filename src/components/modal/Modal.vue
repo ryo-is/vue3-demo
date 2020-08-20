@@ -29,23 +29,23 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue'
-import ButtonElement from '../elements/button.vue'
+import { defineComponent, reactive } from 'vue';
+import ButtonElement from '../elements/button.vue';
 
 export default defineComponent({
   components: { ButtonElement },
   setup() {
     const state = reactive({
       modal: false,
-    })
+    });
     const toggleModal = (value?: boolean) => {
-      state.modal = value ? value : !state.modal
-    }
+      state.modal = value ? value : !state.modal;
+    };
 
     return {
       state,
       toggleModal,
-    }
+    };
   },
-})
+});
 </script>

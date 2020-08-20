@@ -7,20 +7,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue'
-import CounterDisplay from '@/components/counter/CounterDisplay.vue'
-import IncrementButton from '@/components/counter/IncrementButton.vue'
-import DecrementButton from '@/components/counter/DecrementButton.vue'
+import { defineComponent, reactive } from 'vue';
+import CounterDisplay from '@/components/counter/CounterDisplay.vue';
+import IncrementButton from '@/components/counter/IncrementButton.vue';
+import DecrementButton from '@/components/counter/DecrementButton.vue';
 
 type Task = {
-  name: string
-  status: 'done' | 'doing' | 'todo'
-  content: string
-}
+  name: string;
+  status: 'done' | 'doing' | 'todo';
+  content: string;
+};
 
 type State = {
-  tasks: Task[]
-}
+  tasks: Task[];
+};
 
 export default defineComponent({
   name: 'todo',
@@ -32,13 +32,13 @@ export default defineComponent({
   setup() {
     const state: State = reactive({
       tasks: [{ name: 'todo_1', status: 'todo', content: 'hogehoge' }],
-    })
+    });
 
     return {
       state,
-    }
+    };
   },
-})
+});
 </script>
 
 <style lang="scss" scoped></style>
