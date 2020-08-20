@@ -8,10 +8,10 @@
     <Teleport to="#teleport-modal">
       <div
         v-if="state.modal"
-        class="modal absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center"
+        class="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-full modal"
       >
         <div
-          class="overlay absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75"
+          class="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 overlay"
           @click="toggleModal(false)"
         ></div>
         <div
