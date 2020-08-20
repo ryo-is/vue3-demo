@@ -16,6 +16,13 @@ module.exports = {
       serif: [...defaultTheme.fontFamily.serif],
       mono: [...defaultTheme.fontFamily.mono],
     },
+    flexGrow: {
+      default: 1,
+      '0': 0,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+    },
 
     extend: {
       colors: {
