@@ -7,7 +7,7 @@
     ></button-element>
     <Teleport to="#teleport-modal">
       <div
-        v-if="state.modal"
+        v-show="state.modal"
         class="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-full modal"
       >
         <div
@@ -15,7 +15,7 @@
           @click="toggleModal(false)"
         ></div>
         <div
-          class="content bg-gray-400 p-4 w-1/3 h-64 flex flex-col items-center justify-center z-10 rounded-md"
+          class="z-10 flex flex-col items-center justify-center w-1/3 h-64 p-4 bg-gray-400 rounded-md content"
         >
           <button-element
             class="bg-red-500 hover:bg-red-700"
