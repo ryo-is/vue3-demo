@@ -7,7 +7,7 @@
     ></button-element>
     <Teleport to="#teleport-modal">
       <div
-        v-show="state.modal"
+        v-if="state.modal"
         class="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-full modal"
       >
         <div
