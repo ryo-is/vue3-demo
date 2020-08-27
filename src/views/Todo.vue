@@ -19,7 +19,7 @@
       </div>
       <div class="p-4 text-left task-content">
         <textarea
-          style="resize: none;"
+          style="resize: none"
           class="w-full p-2 bg-gray-700 border border-gray-400 rounded-md focus:outline-none"
           rows="5"
           placeholder="Content"
