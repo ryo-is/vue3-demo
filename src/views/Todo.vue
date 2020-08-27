@@ -1,40 +1,40 @@
 <template>
-  <div class="todo w-2/3 m-auto grid grid-flow-row grid-cols-3">
+  <div class="grid w-2/3 grid-flow-row grid-cols-3 m-auto todo">
     <div
-      class="todo-item h-56 flex-1 bg-gray-700 m-4 rounded-md shadow divide-y divide-gray-400"
+      class="flex-1 h-56 m-4 bg-gray-700 divide-y divide-gray-400 rounded-md shadow todo-item"
     >
-      <div class="task-title py-2 pl-4 pr-2 flex items-center">
-        <div class="flex-grow-3 text-left">
+      <div class="flex items-center py-2 pl-4 pr-2 task-title">
+        <div class="text-left flex-grow-3">
           <input
             type="text"
-            class="w-5/6 focus:outline-none bg-gray-700 border border-gray-400 rounded-md py-1 px-2"
+            class="w-5/6 px-2 py-1 bg-gray-700 border border-gray-400 rounded-md focus:outline-none"
             placeholder="Title"
           />
         </div>
         <div
-          class="flex-grow-1 rounded-md py-1 cursor-pointer bg-blue-500 hover:bg-blue-700"
+          class="py-1 bg-blue-500 rounded-md cursor-pointer flex-grow-1 hover:bg-blue-700"
         >
           add
         </div>
       </div>
-      <div class="task-content p-4 text-left">
+      <div class="p-4 text-left task-content">
         <textarea
           style="resize: none;"
-          class="w-full focus:outline-none bg-gray-700 border border-gray-400 rounded-md p-2"
+          class="w-full p-2 bg-gray-700 border border-gray-400 rounded-md focus:outline-none"
           rows="5"
           placeholder="Content"
         />
       </div>
     </div>
     <div
-      class="todo-item flex-1 bg-gray-700 m-4 rounded-md shadow divide-y divide-gray-400"
+      class="flex-1 m-4 bg-gray-700 divide-y divide-gray-400 rounded-md shadow todo-item"
       v-for="(item, index) in state.tasks"
       :key="index"
     >
-      <div class="task-title py-2 pl-4 pr-2 flex items-center">
-        <div class="flex-grow-3 text-left">{{ item.title }}</div>
+      <div class="flex items-center py-2 pl-4 pr-2 task-title">
+        <div class="text-left flex-grow-3">{{ item.title }}</div>
         <div
-          class="flex-grow-1 rounded-md py-1 cursor-pointer"
+          class="py-1 rounded-md cursor-pointer flex-grow-1"
           :class="{
             'bg-red-500 hover:bg-red-700': item.status === 'todo',
             'bg-yellow-500 hover:bg-yellow-700': item.status === 'doing',
@@ -44,7 +44,7 @@
           {{ item.status }}
         </div>
       </div>
-      <div class="task-content p-4 text-left">{{ item.content }}</div>
+      <div class="p-4 text-left task-content">{{ item.content }}</div>
     </div>
   </div>
 </template>
