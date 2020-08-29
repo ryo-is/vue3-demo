@@ -1,5 +1,7 @@
 <template>
-  <div class="fixed inset-x-0 top-0 flex items-center h-12 px-10 z-100">
+  <div
+    class="fixed inset-x-0 top-0 flex items-center h-12 px-10 z-100 bg-gray-800"
+  >
     <div class="mr-4 text-xl font-bold">Vue3 Demo</div>
     <div
       v-for="item in state.links"

@@ -17,6 +17,14 @@ export const tasksStore = () => {
       { title: 'todo_2', status: 'doing', content: 'hogehoge' },
       { title: 'todo_3', status: 'done', content: 'hogehoge' },
       { title: 'todo_4', status: 'done', content: 'hogehoge' },
+      { title: 'todo_4', status: 'done', content: 'hogehoge' },
+      { title: 'todo_4', status: 'done', content: 'hogehoge' },
+      { title: 'todo_4', status: 'done', content: 'hogehoge' },
+      { title: 'todo_4', status: 'done', content: 'hogehoge' },
+      { title: 'todo_4', status: 'done', content: 'hogehoge' },
+      { title: 'todo_4', status: 'done', content: 'hogehoge' },
+      { title: 'todo_4', status: 'done', content: 'hogehoge' },
+      { title: 'todo_4', status: 'done', content: 'hogehoge' },
     ],
   });
 
