@@ -24,5 +24,9 @@ export const tasksStore = () => {
     get tasks() {
       return state.tasks;
     },
+
+    addTasks(task: Task) {
+      state.tasks.push(task);
+    },
   };
 };
