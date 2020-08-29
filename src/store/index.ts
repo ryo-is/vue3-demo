@@ -1,9 +1,11 @@
 import { inject, InjectionKey } from 'vue';
 import { counterStore } from './counter';
+import { tasksStore } from './tasks';
 
 export default function globalStore() {
   return {
     counter: counterStore(),
+    tasksStore: tasksStore(),
   };
 }
 

@@ -27,8 +27,8 @@
       </div>
     </div>
     <div
-      class="flex-1 m-4 bg-gray-700 divide-y divide-gray-400 rounded-md shadow todo-item"
-      v-for="(item, index) in state.tasks"
+      class="flex-1 h-56 m-4 bg-gray-700 divide-y divide-gray-400 rounded-md shadow todo-item"
+      v-for="(item, index) in tasks"
       :key="index"
     >
       <div class="flex items-center py-2 pl-4 pr-2 task-title">
@@ -50,32 +50,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
-
-type Task = {
-  title: string;
-  status: 'done' | 'doing' | 'todo';
-  content: string;
-};
-
-type State = {
-  tasks: Task[];
-};
+import { defineComponent, computed } from 'vue';
+import { useGlobalStore } from '@/store/index';
 
 export default defineComponent({
   name: 'todo',
   setup() {
-    const state: State = reactive({
-      tasks: [
-        { title: 'todo_1', status: 'todo', content: 'hogehoge' },
-        { title: 'todo_2', status: 'doing', content: 'hogehoge' },
-        { title: 'todo_3', status: 'done', content: 'hogehoge' },
-        { title: 'todo_4', status: 'done', content: 'hogehoge' },
-      ],
-    });
+    const { tasksStore } = useGlobalStore();
+    const tasks = computed(() => tasksStore.tasks);
 
     return {
-      state,
+      tasks,
     };
   },
 });
