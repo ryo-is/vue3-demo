@@ -8,14 +8,43 @@
     <Teleport to="#teleport-modal">
       <div
         v-if="state.modal"
-        class="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-full modal"
+        class="
+          absolute
+          top-0
+          left-0
+          flex flex-col
+          items-center
+          justify-center
+          w-full
+          h-full
+          modal
+        "
       >
         <div
-          class="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 overlay"
+          class="
+            absolute
+            top-0
+            left-0
+            w-full
+            h-full
+            bg-gray-900 bg-opacity-75
+            overlay
+          "
           @click="toggleModal(false)"
         ></div>
         <div
-          class="z-10 flex flex-col items-center justify-center w-1/3 h-64 p-4 bg-gray-400 rounded-md content"
+          class="
+            z-10
+            flex flex-col
+            items-center
+            justify-center
+            w-1/3
+            h-64
+            p-4
+            bg-gray-400
+            rounded-md
+            content
+          "
         >
           <button-element
             class="bg-red-500 hover:bg-red-700"

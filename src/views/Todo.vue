@@ -2,19 +2,43 @@
   <div class="w-2/3 m-auto todo">
     <div class="grid grid-flow-row grid-cols-3">
       <div
-        class="flex-1 h-56 m-4 bg-gray-700 divide-y divide-gray-400 rounded-md shadow todo-item"
+        class="
+          flex-1
+          h-56
+          m-4
+          bg-gray-700
+          divide-y divide-gray-400
+          rounded-md
+          shadow
+          todo-item
+        "
       >
         <div class="flex items-center py-2 pl-4 pr-2 task-title">
           <div class="text-left flex-grow-3">
             <input
               v-model="state.newTaskTitle"
               type="text"
-              class="w-5/6 px-2 py-1 bg-gray-700 border border-gray-400 rounded-md focus:outline-none"
+              class="
+                w-5/6
+                px-2
+                py-1
+                bg-gray-700
+                border border-gray-400
+                rounded-md
+                focus:outline-none
+              "
               placeholder="Title"
             />
           </div>
           <div
-            class="py-1 bg-blue-500 rounded-md cursor-pointer flex-grow-1 hover:bg-blue-700"
+            class="
+              py-1
+              bg-blue-500
+              rounded-md
+              cursor-pointer
+              flex-grow-1
+              hover:bg-blue-700
+            "
             @click="add"
           >
             add
@@ -23,7 +47,14 @@
         <div class="p-4 text-left task-content">
           <textarea
             style="resize: none"
-            class="w-full p-2 bg-gray-700 border border-gray-400 rounded-md focus:outline-none"
+            class="
+              w-full
+              p-2
+              bg-gray-700
+              border border-gray-400
+              rounded-md
+              focus:outline-none
+            "
             rows="5"
             placeholder="Content"
             v-model="state.newTaskContent"
@@ -31,7 +62,16 @@
         </div>
       </div>
       <div
-        class="flex-1 h-56 m-4 bg-gray-700 divide-y divide-gray-400 rounded-md shadow todo-item"
+        class="
+          flex-1
+          h-56
+          m-4
+          bg-gray-700
+          divide-y divide-gray-400
+          rounded-md
+          shadow
+          todo-item
+        "
         v-for="(item, index) in tasks"
         :key="index"
       >
